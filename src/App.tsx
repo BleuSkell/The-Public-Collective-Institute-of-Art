@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { fetchArtworks, getArtworkImageUrl } from "./artApi"; // make sure the path is correct
+import NavBar from "./components/navbar";
 import './App.css'
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
   return (
     <>
       <div>
+        <NavBar />
+
         <h1>Artworks</h1>
         <ul>
           {artworks.map(art => (
