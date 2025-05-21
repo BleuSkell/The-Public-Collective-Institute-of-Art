@@ -19,7 +19,6 @@ function App() {
   return (
     <>
       <div>
-        <NavBar />
 
         <h1>Artworks</h1>
         <ul>

@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "https://api.artic.edu/api/v1/artworks";
-const IMG_API_URL = "https://www.artic.edu/iiif/2";
+const API_URL = import.meta.env.VITE_ART_DESC_API_URL;
+const IMG_API_URL = import.meta.env.VITE_ART_IMG_API_URL;
 
 export async function fetchArtworks(page = 1, limit = 10) {
   const response = await axios.get(API_URL, {
