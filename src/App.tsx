@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { fetchArtworks } from "./artApi";
+import { fetchArtworks, getArtworkImageUrl } from "./artApi"; // make sure the path is correct
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     fetchArtworks().then(data => {
-      setArtworks(data.data);
+      setArtworks(data.data); // watch out: `data` contains `data`, `pagination`, etc.
       setLoading(false);
     });
   }, []);
@@ -22,7 +22,15 @@ function App() {
         <ul>
           {artworks.map(art => (
             <li key={art.id}>
-              <strong>{art.title}</strong> – {art.artist_title}
+              <strong>{art.id} - {art.title}</strong> – {art.artist_title}
+              {art.image_id && (
+                <div>
+                  <img 
+                    src={getArtworkImageUrl(art.image_id)}
+                    alt={art.title} 
+                  />
+                </div>
+              )}
             </li>
           ))}
         </ul>
