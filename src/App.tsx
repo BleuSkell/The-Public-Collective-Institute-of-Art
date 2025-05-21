@@ -1,44 +1,19 @@
-import { useState, useEffect } from 'react'
-import { fetchArtworks, getArtworkImageUrl } from "./artApi"; // make sure the path is correct
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navbar";
-import './App.css'
+import HomePage from "./pages/HomePage";
+import ArtListPage from "./pages/ArtList";
+import './App.css';
 
 function App() {
-  const [artworks, setArtworks] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchArtworks().then(data => {
-      setArtworks(data.data); // watch out: `data` contains `data`, `pagination`, etc.
-      setLoading(false);
-    });
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
-
   return (
-    <>
-      <div>
-
-        <h1>Artworks</h1>
-        <ul>
-          {artworks.map(art => (
-            <li key={art.id}>
-              <strong>{art.id} - {art.title}</strong> – {art.artist_title}
-              {art.image_id && (
-                <div>
-                  <img 
-                    src={getArtworkImageUrl(art.image_id)}
-                    alt={art.title} 
-                  />
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
-  )
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/artlist" element={<ArtListPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
