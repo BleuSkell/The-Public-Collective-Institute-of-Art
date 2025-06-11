@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navbar";
 import HomePage from "./pages/HomePage";
 import ArtListPage from "./pages/ArtList";
+import Favorites from "./pages/Favorites";
+import News from "./pages/News";
 import './App.css';
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/artlist" element={<ArtListPage />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </Router>
   );
