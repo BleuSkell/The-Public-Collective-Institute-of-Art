@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ArtlistProvider } from "./contexts/ArtlistContext";
 import NavBar from "./components/navbar";
 import HomePage from "./pages/HomePage";
 import ArtListPage from "./pages/ArtList";
@@ -12,7 +13,14 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/artlist" element={<ArtListPage />} />
+        <Route 
+          path="/artlist" 
+          element={
+            <ArtlistProvider>
+              <ArtListPage />
+            </ArtlistProvider>
+          } 
+        />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/news" element={<News />} />
       </Routes>

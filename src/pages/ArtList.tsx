@@ -1,18 +1,10 @@
-import { fetchArtworks, getArtworkImageUrl } from "../artApi";
-import { useEffect, useState } from "react";
+import { getArtworkImageUrl } from "../artApi";
+import { useArtlist } from "../contexts/ArtlistContext";
 
 function ArtList() {
-    const [artworks, setArtworks] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
+    const { artworks, loading } = useArtlist();
 
-    useEffect(() => {
-        fetchArtworks().then(data => {
-            setArtworks(data.data);
-            setLoading(false);
-        });
-    }, []);
-
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div>Loading artworks...</div>;
 
     return (
         <div>
@@ -29,6 +21,9 @@ function ArtList() {
                                 />
                             </div>
                         )}
+                        <button className="favoriteButton">
+                            Add to favorites
+                        </button>
                     </li>
                 ))}
             </ul>
