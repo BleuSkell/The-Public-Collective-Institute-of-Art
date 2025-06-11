@@ -1,8 +1,10 @@
 import { getArtworkImageUrl } from "../artApi";
 import { useArtlist } from "../contexts/ArtlistContext";
+import { useFavorites } from "../contexts/FavoritesContext";
 
 function ArtList() {
     const { artworks, loading } = useArtlist();
+    const { addToFavorites } = useFavorites();
 
     if (loading) return <div>Loading artworks...</div>;
 
@@ -21,7 +23,7 @@ function ArtList() {
                                 />
                             </div>
                         )}
-                        <button className="favoriteButton">
+                        <button onClick={() => addToFavorites(art)} className="favoriteButton">
                             Add to favorites
                         </button>
                     </li>
