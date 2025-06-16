@@ -1,0 +1,84 @@
+.banner-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/img/banner.jpg");
+    height: 40rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner-text {
+    text-align: center;
+    color: white;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: larger;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.intro-text {
+    font-family: "Viaoda Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+
+    border-bottom: .1rem solid black;
+    width: 90%;
+}
+.intro-text-h2 {
+    width: 50%;
+    text-align: left;
+    margin-left: 10rem;
+
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 5rem;
+    margin-left: 10rem;
+}
+.news-img {
+    width: 40%;
+}
+.news-updates {
+    text-align: left;
+    margin-left: 2rem;
+    width: 40%;
+}
+.news {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: larger;
+
+    margin: 0;
+    color: #34220c;
+}
+.news-subject {
+    font-family: "Viaoda Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+}
+.news-content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: larger;
+}
+.news-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: larger;
+    text-decoration: none;
+}

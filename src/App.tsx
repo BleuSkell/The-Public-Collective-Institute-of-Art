@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ArtlistProvider } from "./contexts/ArtlistContext";
 import { FavoritesProvider } from "./contexts/FavoritesContext";
 import NavBar from "./components/navbar";
+import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ArtListPage from "./pages/ArtList";
 import Favorites from "./pages/Favorites";
@@ -29,6 +30,8 @@ function App() {
 
           <Route path="/news" element={<News />} />
         </Routes>
+
+        <Footer />
       </Router>
     </FavoritesProvider>
   );

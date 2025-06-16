@@ -1,0 +1,36 @@
+footer {
+    background-color: #dcdcdc;
+    margin-top: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.copyright {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: larger;
+    text-align: left;
+}
+.about-us {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: larger;
+    text-align: left;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
