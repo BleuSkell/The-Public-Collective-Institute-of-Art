@@ -23,7 +23,7 @@ function HomePage() {
                     </div>
                 </div>
 
-                <div className="news-container">
+                <div className="news-container-home">
                     <img src="../../public/img/news-img.png" alt="news-img" className="news-img"/>
 
                     <div className="news-updates">

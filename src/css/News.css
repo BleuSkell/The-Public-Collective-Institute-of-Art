@@ -1,0 +1,74 @@
+.newspage-title {
+    font-family: "Viaoda Libre", serif;
+    font-style: normal;
+    font-size: xx-large;
+}
+
+.news-alignment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.news-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+}
+.news-item>h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: x-large;
+}
+.news-item>p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: larger;
+    text-align: left;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    position: sticky;
+    bottom: 2rem;
+    z-index: 5;
+}
+.signup-news {
+    background-color: #d0d0d0;
+    width: 30%;
+    padding: 2rem;
+    border-radius: .4rem;
+    margin-right: 4rem;
+}
+.signup-news>h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    margin: 0;
+}
+.signup-news>p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: medium;
+    margin: 0;
+}
+.signup-input {
+    border: none;
+    padding: 1rem;
+    width: 90%;
+    margin: 1rem;
+}
+.signup-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 1rem;
+    border-radius: .3rem;
+    color: black;
+}
+.input-error {
+    margin-bottom: .3;
+    color: red;
+}

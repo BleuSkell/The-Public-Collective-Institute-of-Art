@@ -11,29 +11,31 @@ function Favorites() {
 
   return (
     <div>
-      <h1 className="favorites-title">Your Favorites</h1>
+      <main>
+        <h1 className="favorites-title">Your Favorites</h1>
 
-      <ul className="favorites-list">
-        {favorites.map((art) => (
-          <li key={art.id} className="favorite-art">
-            {art.image_id && (
-              <div>
-                <img
-                  src={getArtworkImageUrl(art.image_id)}
-                  alt={art.title}
-                />
+        <ul className="favorites-list">
+          {favorites.map((art) => (
+            <li key={art.id} className="favorite-art">
+              {art.image_id && (
+                <div>
+                  <img
+                    src={getArtworkImageUrl(art.image_id)}
+                    alt={art.title}
+                  />
+                </div>
+              )}
+              <div className="favorite-details">
+                <p><strong>{art.title}</strong> – {art.artist_title}</p>
+
+                <button onClick={() => removeFromFavorites(art.id)} className="favoriteButton">
+                  Remove from favorites
+                </button>
               </div>
-            )}
-            <div className="favorite-details">
-              <p><strong>{art.title}</strong> – {art.artist_title}</p>
-
-              <button onClick={() => removeFromFavorites(art.id)} className="favoriteButton">
-                Remove from favorites
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </main>
     </div>
   );
 }
