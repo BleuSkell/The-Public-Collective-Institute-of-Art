@@ -35,10 +35,6 @@ function HomePage() {
                             After a long time of programming the website's prototype has finally been finished. 
                             I'm personally proud of how it looks right now, but improvements are always nice.
                         </p>
-
-                        <a href="" className="news-link">
-                            Be up-to-date with the latest news, read more here
-                        </a>
                     </div>
                 </div>
             </main>

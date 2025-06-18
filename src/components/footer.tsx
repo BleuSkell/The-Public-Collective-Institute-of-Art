@@ -23,10 +23,6 @@ function Footer() {
                         About us
                     </h3>
 
-                    <a href="" className='footer-link'>
-                        News
-                    </a>
-
                     <a href="https://www.instagram.com/seervska/" className='footer-link'>
                         Instagram
                     </a>
