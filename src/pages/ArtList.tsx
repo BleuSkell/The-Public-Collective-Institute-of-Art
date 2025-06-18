@@ -17,7 +17,7 @@ function ArtList() {
 
             <ul className="art-list">
                 {artworks.map(art => (
-                    <li key={art.id}>
+                    <li key={art.id} className="art">
                         {art.image_id && (
                             <div>
                                 <img

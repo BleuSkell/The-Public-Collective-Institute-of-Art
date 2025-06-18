@@ -1,21 +1,11 @@
-.artlist-title {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: xx-large;
-    text-decoration: none;
-
-    border-bottom: .1rem solid black;
-    padding-bottom: 1rem;
-}
-
-.artlist-desc {
+.favorites-title {
     font-family: "Viaoda Libre", serif;
     font-weight: 400;
     font-style: normal;
     font-size: xx-large;
 }
 
-.art-list {
+.favorites-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -25,11 +15,7 @@
     align-items: center;
 }
 
-.art {
-    margin: 5rem;
-}
-
-.art-details {
+.favorite-details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -38,7 +24,7 @@
     margin-top: 1rem;
 }
 
-.favorite-button {
+.favoriteButton {
     background-color: #d6d6d6;
     border: none;
     padding: 1rem;

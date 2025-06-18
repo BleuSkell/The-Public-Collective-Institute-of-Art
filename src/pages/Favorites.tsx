@@ -1,5 +1,6 @@
 import { useFavorites } from "../contexts/FavoritesContext";
 import { getArtworkImageUrl } from "../artApi";
+import "../css/Favorites.css";
 
 function Favorites() {
   const { favorites, removeFromFavorites } = useFavorites();
@@ -10,11 +11,11 @@ function Favorites() {
 
   return (
     <div>
-      <h1>Your Favorites</h1>
-      <ul>
+      <h1 className="favorites-title">Your Favorites</h1>
+
+      <ul className="favorites-list">
         {favorites.map((art) => (
-          <li key={art.id}>
-            <strong>{art.id} - {art.title}</strong> – {art.artist_title}
+          <li key={art.id} className="favorite-art">
             {art.image_id && (
               <div>
                 <img
@@ -23,9 +24,13 @@ function Favorites() {
                 />
               </div>
             )}
-            <button onClick={() => removeFromFavorites(art.id)} className="favoriteButton">
-              Remove from favorites
-            </button>
+            <div className="favorite-details">
+              <p><strong>{art.title}</strong> – {art.artist_title}</p>
+
+              <button onClick={() => removeFromFavorites(art.id)} className="favoriteButton">
+                Remove from favorites
+              </button>
+            </div>
           </li>
         ))}
       </ul>

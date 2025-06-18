@@ -9,11 +9,11 @@ function Footer() {
                         © 2025 The Public Collective Insitute of Art
                     </h3>
 
-                    <p>
+                    <p className='copyright-text'>
                         This project was created for educational purposes.
                     </p>
 
-                    <p>
+                    <p className='copyright-text'>
                         All rights reserved.
                     </p>
                 </div>
@@ -23,19 +23,19 @@ function Footer() {
                         About us
                     </h3>
 
-                    <a href="">
+                    <a href="" className='footer-link'>
                         News
                     </a>
 
-                    <a href="https://www.instagram.com/seervska/">
+                    <a href="https://www.instagram.com/seervska/" className='footer-link'>
                         Instagram
                     </a>
 
-                    <a href="https://github.com/BleuSkell">
+                    <a href="https://github.com/BleuSkell" className='footer-link'>
                         Github
                     </a>
 
-                    <a href="https://www.linkedin.com/in/kyano-sowirono-154789329/">
+                    <a href="https://www.linkedin.com/in/kyano-sowirono-154789329/" className='footer-link'>
                         LinkedIn
                     </a>
                 </div>
